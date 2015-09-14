@@ -16,7 +16,7 @@
 
  <resources>
    <j2se href="http://java.sun.com/products/autodl/j2se" version="1.5+" max-heap-size="512m" />
-   <property name="font.file" value="atari/ATARCS__.TTF" />
+   <property name="jnlp.app.properties" value="tetris.properties" />
    <property name="LWJGL_DISABLE_XRANDR" value="true" />
        
     <jar href="tetris-1.0.jar" main="true"/>
