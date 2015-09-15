@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp
    spec="1.0+"
-   codebase="http://dunnololda.github.io/scageprojects/tetris"
+   codebase="http://example.com"
    href="run.jnlp">
  <information>
    <title>Tetris</title>
