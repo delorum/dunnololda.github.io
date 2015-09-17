@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+   spec="1.0+"
+   codebase="https://dunnololda.github.io/scageprojects/jetflight"
+   href="run.jnlp">
+ <information>
+   <title>Jet Flight</title>
+   <vendor>Jet Flight<vendor/>
+   <description kind="one-line">Fight the sky to the enemy's death!</description>
+   <offline-allowed/>
+ </information>
+
+ <security>
+    <all-permissions/>
+ </security>
+
+ <resources>
+   <j2se href="http://java.sun.com/products/autodl/j2se" version="1.5+" max-heap-size="512m" />
+   <property name="jnlp.app.properties" value="scageapp.properties" />
+   <property name="LWJGL_DISABLE_XRANDR" value="true" />
+       
+    <jar href="jetflight-1.0.jar" main="true"/>
+    <jar href="scala-library-2.10.4.jar"/>
+    <jar href="scage_2.10-11.3.jar"/>
+    <jar href="akka-actor_2.10-2.3.11.jar"/>
+    <jar href="config-1.2.1.jar"/>
+    <jar href="natives-linux-xinitthreads-1.0-natives-linux-xinitthreads.jar"/>
+    <jar href="cli_2.10-1.7.jar"/>
+    <jar href="state_2.10-1.4.jar"/>
+    <jar href="mysimplelogger_2.10-1.4.jar"/>
+    <jar href="slf4j-api-1.6.1.jar"/>
+    <jar href="scala-swing-2.10.4.jar"/>
+    <jar href="lwjgl-2.9.3.jar"/>
+    <jar href="lwjgl-platform-2.9.3-natives-windows.jar"/>
+    <jar href="lwjgl-platform-2.9.3-natives-linux.jar"/>
+    <jar href="lwjgl-platform-2.9.3-natives-osx.jar"/>
+    <jar href="jinput-2.0.5.jar"/>
+    <jar href="jutils-1.0.0.jar"/>
+    <jar href="jinput-platform-2.0.5-natives-linux.jar"/>
+    <jar href="jinput-platform-2.0.5-natives-windows.jar"/>
+    <jar href="jinput-platform-2.0.5-natives-osx.jar"/>
+    <jar href="lwjgl_util-2.9.3.jar"/>
+    <jar href="slick2d-core-1.0.1.jar"/>
+    <jar href="jorbis-0.0.17.jar"/>
+    <jar href="phys2d-060408.jar"/>
+    <jar href="simple-net_2.10-2.0.jar"/>
+    <jar href="play-json_2.10-2.3.10.jar"/>
+    <jar href="play-iteratees_2.10-2.3.10.jar"/>
+    <jar href="scala-stm_2.10-0.7.jar"/>
+    <jar href="play-datacommons_2.10-2.3.10.jar"/>
+    <jar href="joda-time-2.3.jar"/>
+    <jar href="joda-convert-1.6.jar"/>
+    <jar href="jackson-annotations-2.3.2.jar"/>
+    <jar href="jackson-core-2.3.2.jar"/>
+    <jar href="jackson-databind-2.3.2.jar"/>
+    <jar href="scala-reflect-2.10.4.jar"/>
+    <jar href="logback-classic-1.0.0.jar"/>
+    <jar href="logback-core-1.0.0.jar"/>
+    <jar href="play-functional_2.10-2.3.10.jar"/>
+
+ </resources>
+ <resources os="Windows">
+    <nativelib href="natives/lwjgl-natives.jar"/>
+  </resources>
+  <resources os="Linux">
+    <nativelib href="natives/lwjgl-natives.jar"/>
+  </resources>
+  <resources os="Mac">
+    <nativelib href="natives/lwjgl-natives.jar"/>
+  </resources>
+
+ <application-desc main-class="com.github.dunnololda.scageprojects.jetflight.offline.JetFlight" />
+</jnlp>
+
