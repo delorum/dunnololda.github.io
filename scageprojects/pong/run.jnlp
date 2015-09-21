@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp
    spec="1.0+"
-   codebase="http://example.com"
+   codebase="https://dunnololda.github.io/scageprojects/pong"
    href="run.jnlp">
  <information>
    <title>Scage Project</title>
