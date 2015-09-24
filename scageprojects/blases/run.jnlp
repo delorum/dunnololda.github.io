@@ -4,8 +4,8 @@
    codebase="https://dunnololda.github.io/scageprojects/blases"
    href="run.jnlp">
  <information>
-   <title>Scage Project</title>
-   <vendor>Scage Project<vendor/>
+   <title>Blases</title>
+   <vendor>Blases<vendor/>
    <description kind="one-line">Simple Scage Project Stub</description>
    <offline-allowed/>
  </information>
