@@ -20,41 +20,41 @@
    <property name="LWJGL_DISABLE_XRANDR" value="true" />
        
     <jar href="spacewar-1.0.jar" main="true"/>
-    <jar href="scala-library-2.10.4.jar"/>
-    <jar href="scage_2.10-11.4.jar"/>
-    <jar href="akka-actor_2.10-2.3.11.jar"/>
-    <jar href="config-1.2.1.jar"/>
-    <jar href="natives-linux-xinitthreads-1.0-natives-linux-xinitthreads.jar"/>
-    <jar href="cli_2.10-1.7.jar"/>
-    <jar href="logback-classic-1.0.0.jar"/>
-    <jar href="logback-core-1.0.0.jar"/>
-    <jar href="state_2.10-1.4.jar"/>
-    <jar href="mysimplelogger_2.10-1.4.jar"/>
-    <jar href="slf4j-api-1.6.1.jar"/>
-    <jar href="scala-swing-2.10.4.jar"/>
-    <jar href="lwjgl-2.9.3.jar"/>
-    <jar href="lwjgl-platform-2.9.3-natives-windows.jar"/>
-    <jar href="lwjgl-platform-2.9.3-natives-linux.jar"/>
-    <jar href="lwjgl-platform-2.9.3-natives-osx.jar"/>
-    <jar href="jinput-2.0.5.jar"/>
-    <jar href="jutils-1.0.0.jar"/>
-    <jar href="jinput-platform-2.0.5-natives-linux.jar"/>
-    <jar href="jinput-platform-2.0.5-natives-windows.jar"/>
-    <jar href="jinput-platform-2.0.5-natives-osx.jar"/>
-    <jar href="lwjgl_util-2.9.3.jar"/>
-    <jar href="slick2d-core-1.0.1.jar"/>
-    <jar href="jorbis-0.0.17.jar"/>
-    <jar href="phys2d-060408.jar"/>
+    <jar href="../../common/scala-library-2.10.4.jar"/>
+    <jar href="../../common/scage_2.10-11.4.jar"/>
+    <jar href="../../common/akka-actor_2.10-2.3.11.jar"/>
+    <jar href="../../common/config-1.2.1.jar"/>
+    <jar href="../../common/natives-linux-xinitthreads-1.0-natives-linux-xinitthreads.jar"/>
+    <jar href="../../common/cli_2.10-1.7.jar"/>
+    <jar href="../../common/logback-classic-1.0.0.jar"/>
+    <jar href="../../common/logback-core-1.0.0.jar"/>
+    <jar href="../../common/state_2.10-1.4.jar"/>
+    <jar href="../../common/mysimplelogger_2.10-1.4.jar"/>
+    <jar href="../../common/slf4j-api-1.6.1.jar"/>
+    <jar href="../../common/scala-swing-2.10.4.jar"/>
+    <jar href="../../common/lwjgl-2.9.3.jar"/>
+    <jar href="../../common/lwjgl-platform-2.9.3-natives-windows.jar"/>
+    <jar href="../../common/lwjgl-platform-2.9.3-natives-linux.jar"/>
+    <jar href="../../common/lwjgl-platform-2.9.3-natives-osx.jar"/>
+    <jar href="../../common/jinput-2.0.5.jar"/>
+    <jar href="../../common/jutils-1.0.0.jar"/>
+    <jar href="../../common/jinput-platform-2.0.5-natives-linux.jar"/>
+    <jar href="../../common/jinput-platform-2.0.5-natives-windows.jar"/>
+    <jar href="../../common/jinput-platform-2.0.5-natives-osx.jar"/>
+    <jar href="../../common/lwjgl_util-2.9.3.jar"/>
+    <jar href="../../common/slick2d-core-1.0.1.jar"/>
+    <jar href="../../common/jorbis-0.0.17.jar"/>
+    <jar href="../../common/phys2d-060408.jar"/>
 
  </resources>
  <resources os="Windows">
-    <nativelib href="natives/lwjgl-natives.jar"/>
+    <nativelib href="../../common/natives/lwjgl-natives.jar"/>
   </resources>
   <resources os="Linux">
-    <nativelib href="natives/lwjgl-natives.jar"/>
+    <nativelib href="../../common/natives/lwjgl-natives.jar"/>
   </resources>
   <resources os="Mac">
-    <nativelib href="natives/lwjgl-natives.jar"/>
+    <nativelib href="../../common/natives/lwjgl-natives.jar"/>
   </resources>
 
  <application-desc main-class="com.github.dunnololda.scageprojects.spacewar.SpaceWar" />
