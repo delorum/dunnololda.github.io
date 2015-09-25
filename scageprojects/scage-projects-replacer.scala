@@ -79,3 +79,20 @@ scageprojects.foreach {
         }
     }
 }
+
+// ищем джарники в common, которые не используются больше нигде и выводим их список
+val jars_in_common_not_used_anywhere = jars_in_common.toBuffer
+scageprojects.foreach {
+  case name =>
+  for {
+      line <- io.Source.fromFile(s"$name/run.jnlp").getLines
+    } {
+      if(line.contains("<jar href=") && line.contains("../../common/") && !line.contains("main=\"true\"")) {
+        jars_in_common_not_used_anywhere.find(x => line.contains(x)).foreach(x => jars_in_common_not_used_anywhere -= x)
+      }
+    }
+}
+if(jars_in_common_not_used_anywhere.nonEmpty) {
+  println("jars in common which are not used anywhere:")
+  jars_in_common_not_used_anywhere.foreach(println)
+}
