@@ -21,7 +21,7 @@
        
     <jar href="scarcanoid-1.0.jar" main="true"/>
     <jar href="../../common/scala-library-2.10.4.jar"/>
-    <jar href="../../common/scage_2.10-11.3.jar"/>
+    <jar href="../../common/scage_2.10-11.4.jar"/>
     <jar href="../../common/akka-actor_2.10-2.3.11.jar"/>
     <jar href="../../common/config-1.2.1.jar"/>
     <jar href="../../common/natives-linux-xinitthreads-1.0-natives-linux-xinitthreads.jar"/>

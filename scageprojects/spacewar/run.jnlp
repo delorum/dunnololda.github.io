@@ -4,8 +4,8 @@
    codebase="https://dunnololda.github.io/scageprojects/spacewar"
    href="run.jnlp">
  <information>
-   <title>Scage Project</title>
-   <vendor>Scage Project<vendor/>
+   <title>Space War</title>
+   <vendor>Space War<vendor/>
    <description kind="one-line">Simple Scage Project Stub</description>
    <offline-allowed/>
  </information>

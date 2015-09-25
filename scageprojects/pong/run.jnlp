@@ -4,8 +4,8 @@
    codebase="https://dunnololda.github.io/scageprojects/pong"
    href="run.jnlp">
  <information>
-   <title>Scage Project</title>
-   <vendor>Scage Project<vendor/>
+   <title>Pong</title>
+   <vendor>Pong<vendor/>
    <description kind="one-line">Simple Scage Project Stub</description>
    <offline-allowed/>
  </information>

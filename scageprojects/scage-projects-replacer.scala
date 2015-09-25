@@ -93,6 +93,6 @@ scageprojects.foreach {
     }
 }
 if(jars_in_common_not_used_anywhere.nonEmpty) {
-  println("jars in common which are not used anywhere:")
+  println("jars in common which are not used:")
   jars_in_common_not_used_anywhere.foreach(println)
 }
