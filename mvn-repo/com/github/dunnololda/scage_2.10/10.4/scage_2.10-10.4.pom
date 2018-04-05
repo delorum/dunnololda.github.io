@@ -1,0 +1,438 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.dunnololda</groupId>
+  <artifactId>scage_${publish.scala.version}</artifactId>
+  <packaging>jar</packaging>
+  <version>10.4</version>
+  <inceptionYear>2011</inceptionYear>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/dunnololda/state/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+  <name>Scage</name>
+  <description>Game Engine written in Scala</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <scala.version>2.10.1</scala.version>
+    <publish.scala.version>2.10</publish.scala.version>
+    <lwjgl.version>2.8.2</lwjgl.version>
+
+    <!-- github server corresponds to entry in ~/.m2/settings.xml -->
+    <github.global.server>github</github.global.server>
+  </properties>
+
+  <repositories>
+      <repository>
+          <id>dunnololda's maven repo</id>
+          <url>https://raw.github.com/dunnololda/mvn-repo/master</url>
+      </repository>
+
+      <repository>
+          <id>typesafe</id>
+          <name>Typesafe Repository</name>
+          <url>http://repo.typesafe.com/typesafe/releases/</url>
+      </repository>
+
+    <repository>
+      <id>scala-tools.org</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>https://oss.sonatype.org/content/groups/scala-tools/</url>
+    </repository>
+
+    <!--<repository>
+      <id>slick.cokeandcode.com</id>
+      <name>Slick Maven Repository</name>
+      <url>http://slick.cokeandcode.com/mavenrepo</url>
+    </repository>-->
+
+    <!--<repository>
+      <id>lwjgl</id>
+      <name>lwjgl</name>
+      <url>http://adterrasperaspera.com/lwjgl</url>
+    </repository>-->
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>scala-tools.org</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases</url>
+    </pluginRepository>
+
+    <pluginRepository>
+      <name>oss.sonatype.org - github-releases</name>
+      <id>oss.sonatype.org-github-releases</id>
+      <url>http://oss.sonatype.org/content/repositories/github-releases</url>
+    </pluginRepository>
+
+      <pluginRepository>
+          <id>pixie</id>
+          <name>Logback Repository</name>
+          <url>scp://pixie.qos.ch/var/mvnrepo/</url>
+      </pluginRepository>
+
+      <pluginRepository>
+          <id>Codehaus Snapshots</id>
+          <url>http://nexus.codehaus.org/snapshots/</url>
+          <snapshots>
+              <enabled>true</enabled>
+          </snapshots>
+          <releases>
+              <enabled>true</enabled>  <!-- Workaround for MNG-2974, see note below -->
+          </releases>
+      </pluginRepository>
+  </pluginRepositories>
+
+  <dependencies>
+      <!--<dependency>
+          <groupId>com.typesafe.akka</groupId>
+          <artifactId>akka-actor</artifactId>
+          <version>2.0.5</version>
+      </dependency>-->
+    <!--<dependency>
+	  <groupId>log4j</groupId>
+	  <artifactId>log4j</artifactId>
+	  <version>1.2.14</version>
+	  <scope>compile</scope>
+	</dependency>-->
+      <dependency>
+          <groupId>com.github.dunnololda</groupId>
+          <artifactId>cli_${publish.scala.version}</artifactId>
+          <version>1.5</version>
+      </dependency>
+      <dependency>
+          <groupId>com.github.dunnololda</groupId>
+          <artifactId>state_${publish.scala.version}</artifactId>
+          <version>1.2</version>
+      </dependency>
+      <dependency>
+          <groupId>com.github.dunnololda</groupId>
+          <artifactId>mysimplelogger_${publish.scala.version}</artifactId>
+          <version>1.2</version>
+      </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-swing</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.lwjgl.lwjgl</groupId>
+          <artifactId>lwjgl</artifactId>
+          <version>${lwjgl.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.lwjgl.lwjgl</groupId>
+          <artifactId>lwjgl_util</artifactId>
+          <version>${lwjgl.version}</version>
+      </dependency>
+      <!--<dependency>
+          <groupId>slick</groupId>
+          <artifactId>slick</artifactId>
+          <version>274</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>org.lwjgl</groupId>
+                  <artifactId>lwjgl-native</artifactId>
+              </exclusion>
+          </exclusions>
+      </dependency>-->
+      <dependency>
+        <groupId>org.slick2d</groupId>
+        <artifactId>slick2d-core</artifactId>
+        <version>1.0.1</version>
+      </dependency>
+      <dependency>
+          <groupId>phys2d</groupId>
+          <artifactId>phys2d</artifactId>
+          <version>060408</version>
+      </dependency>
+      <!--<dependency>
+          <groupId>org.scalaz</groupId>
+          <artifactId>scalaz-core_${scala.version}</artifactId>
+          <version>6.0.3</version>
+      </dependency>-->
+      <!--<dependency>
+          <groupId>org.xerial.snappy</groupId>
+          <artifactId>snappy-java</artifactId>
+          <version>1.0.4.1</version>
+          <type>jar</type>
+          <scope>compile</scope>
+      </dependency>-->
+  </dependencies>
+
+  <build>
+      <extensions>
+        <extension>
+         <groupId>org.apache.maven.wagon</groupId>
+         <artifactId>wagon-webdav</artifactId>
+         <version>1.0-beta-2</version>
+        </extension>
+       </extensions>
+
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
+      <filters>
+            <filter>build.properties</filter>
+          <filter>local-build.properties</filter>
+          </filters>
+      <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+        </resource>
+      </resources>
+      <testResources>
+          <testResource>
+              <directory>src/test/resources</directory>
+          </testResource>
+      </testResources>
+
+    <plugins>
+        <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>properties-maven-plugin</artifactId>
+              <version>1.0-alpha-1</version>
+              <executions>
+                <execution>
+                  <phase>initialize</phase>
+                  <goals>
+                    <goal>read-project-properties</goal>
+                  </goals>
+                  <configuration>
+                    <files>
+                      <file>build.properties</file>
+                      <filter>local-build.properties</filter>
+                    </files>
+                    <quiet>true</quiet>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <version>2.15.2</version>
+        <executions>
+                      <execution>
+                        <id>compile</id>
+                        <goals><goal>compile</goal></goals>
+                        <phase>compile</phase>
+                      </execution>
+                      <execution>
+                        <id>test-compile</id>
+                        <goals><goal>testCompile</goal></goals>
+                        <phase>test-compile</phase>
+                      </execution>
+                      <execution>
+                        <phase>process-resources</phase>
+                        <goals><goal>compile</goal></goals>
+                      </execution>
+        </executions>
+        <configuration>
+          <scalaVersion>${scala.version}</scalaVersion>
+          <args>
+              <!--<arg>-optimise</arg>-->
+              <arg>-unchecked</arg>
+              <arg>-deprecation</arg>
+              <arg>-feature</arg>
+              <arg>-Yinline-warnings</arg>
+          </args>
+          <!--<jvmArgs>
+              <jvmArg>-Xmx1536m</jvmArg>
+          </jvmArgs>-->
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <downloadSources>true</downloadSources>
+          <buildcommands>
+            <buildcommand>ch.epfl.lamp.sdt.core.scalabuilder</buildcommand>
+          </buildcommands>
+          <additionalProjectnatures>
+            <projectnature>ch.epfl.lamp.sdt.core.scalanature</projectnature>
+          </additionalProjectnatures>
+          <classpathContainers>
+            <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
+            <classpathContainer>ch.epfl.lamp.sdt.launching.SCALA_CONTAINER</classpathContainer>
+          </classpathContainers>
+        </configuration>
+      </plugin>
+        <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                  <artifactItems>
+                    <artifactItem>
+                      <groupId>org.lwjgl</groupId>
+                      <artifactId>lwjgl-native</artifactId>
+                      <version>${lwjgl.version}</version>
+                      <type>jar</type>
+                      <outputDirectory>${project.build.directory}/libs/natives</outputDirectory>
+                      <overWrite>true</overWrite>
+                    </artifactItem>
+                  </artifactItems>
+                </configuration>
+                <executions>
+                  <execution>
+                    <id>unpack</id>
+                    <phase>generate-resources</phase>
+                    <goals>
+                      <goal>unpack</goal>
+                    </goals>
+                  </execution>
+                </executions>
+              </plugin>-->
+        <plugin>
+            <groupId>com.googlecode.mavennatives</groupId>
+            <artifactId>maven-nativedependencies-plugin</artifactId>
+            <version>0.0.5</version>
+            <executions>
+                <execution>
+                    <id>unpacknatives</id>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>copy</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.7.2</version>
+            <configuration>
+                <argLine>
+                  -Dapp.properties=scagetest-properties.txt -Djava.library.path=${project.build.directory}/natives -DLWJGL_DISABLE_XRANDR=true
+                </argLine>
+            </configuration>
+        </plugin>
+        <!--<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>buildnumber-maven-plugin</artifactId>
+            <version>1.1-SNAPSHOT</version>
+            <executions>
+                <execution>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>create</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <doCheck>true</doCheck>
+                <doUpdate>true</doUpdate>
+                <revisionOnScmFailure>1234</revisionOnScmFailure>
+            </configuration>
+        </plugin>-->
+        <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.3.1</version>
+                    <configuration>
+                        <!--<archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            </manifest>
+                            <manifestEntries>
+                                <Implementation-Build>${buildNumber}</Implementation-Build>
+                            </manifestEntries>
+                        </archive>-->
+                       <excludes>
+                           <exclude>log4j.properties</exclude>
+                           <exclude>logback.xml</exclude>
+                       </excludes>
+                    </configuration>
+        </plugin>
+        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+	            <executions>
+	                <execution>
+	                    <goals>
+	                        <goal>jar</goal>
+	                        <goal>test-jar</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+        </plugin>
+        <plugin>
+            <groupId>com.github.github</groupId>
+            <artifactId>site-maven-plugin</artifactId>
+            <version>0.10</version>
+            <configuration>
+                <message>Maven artifacts for ${project.artifactId} ${project.version}</message>  <!-- git commit message -->
+                <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+                <branch>refs/heads/master</branch>                       <!-- remote branch name -->
+                <includes><include>**/*</include></includes>
+                <repositoryName>mvn-repo</repositoryName>      <!-- github repo name -->
+                <repositoryOwner>dunnololda</repositoryOwner>    <!-- github username  -->
+                <merge>true</merge>
+            </configuration>
+            <executions>
+                <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+                <execution>
+                    <goals>
+                        <goal>site</goal>
+                    </goals>
+                    <phase>deploy</phase>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <version>2.15.2</version>
+        <configuration>
+          <scalaVersion>${scala.version}</scalaVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+<!--<distributionManagement>
+  <repository>
+   <id>googlecode.scage.repo</id>
+   <url>dav:https://scage.googlecode.com/svn/maven-repository/</url>
+  </repository>
+ </distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Temporary Staging Repository</name>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+    </distributionManagement>
+</project>
